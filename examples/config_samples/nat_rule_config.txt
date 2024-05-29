@@ -1,0 +1,20 @@
+NAT_RULE nat-web-server
+  source_zone untrust
+  destination_zone dmz
+  source_address any
+  destination_address 10.0.0.2
+  translated_address 192.168.1.100
+
+NAT_RULE nat-vpn-client
+  source_zone trust
+  destination_zone untrust
+  source_address 192.168.1.0/24
+  destination_address any
+  translated_address 10.0.0.3
+
+NAT_RULE nat-dmz-to-internet
+  source_zone dmz
+  destination_zone untrust
+  source_address 172.16.0.0/24
+  destination_address any
+  translated_address 10.0.0.1

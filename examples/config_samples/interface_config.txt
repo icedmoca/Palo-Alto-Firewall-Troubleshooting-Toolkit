@@ -1,0 +1,11 @@
+INTERFACE ethernet1/1
+  ip-address 192.168.1.1/24
+  zone trust
+
+INTERFACE ethernet1/2
+  ip-address 10.0.0.1/24
+  zone untrust
+
+INTERFACE ethernet1/3
+  ip-address 172.16.0.1/24
+  zone dmz

@@ -1,0 +1,23 @@
+SECURITY_POLICY allow-web-traffic
+  source_zone trust
+  destination_zone untrust
+  source_address any
+  destination_address any
+  application web-browsing
+  action allow
+
+SECURITY_POLICY deny-ssh-traffic
+  source_zone untrust
+  destination_zone dmz
+  source_address any
+  destination_address any
+  application ssh
+  action deny
+
+SECURITY_POLICY allow-dmz-to-trust
+  source_zone dmz
+  destination_zone trust
+  source_address any
+  destination_address any
+  application any
+  action allow

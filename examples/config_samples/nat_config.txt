@@ -1,0 +1,23 @@
+NAT_RULE nat-rule-1
+  source_zone trust
+  destination_zone untrust
+  source_address 192.168.1.0/24
+  destination_address any
+  service http
+  translated_address 10.0.0.10
+
+NAT_RULE nat-rule-2
+  source_zone untrust
+  destination_zone dmz
+  source_address any
+  destination_address 172.16.0.0/24
+  service any
+  translated_address 172.16.0.100
+
+NAT_RULE nat-rule-3
+  source_zone dmz
+  destination_zone trust
+  source_address 172.16.0.1
+  destination_address 192.168.1.1
+  service any
+  translated_address 192.168.1.100
