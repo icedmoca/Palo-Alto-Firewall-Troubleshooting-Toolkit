@@ -7,7 +7,7 @@ def validate_nat_rules(config_file):
 
     nat_rules = []
     for line in lines:
-        # Example regex to match NAT rule entries
+        # regex to match NAT rule entries
         match = re.match(r'NAT_RULE\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)', line)
         if match:
             rule_name, source, destination, translated = match.groups()

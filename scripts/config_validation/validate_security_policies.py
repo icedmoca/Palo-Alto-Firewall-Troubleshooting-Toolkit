@@ -7,7 +7,7 @@ def validate_security_policies(config_file):
 
     security_policies = []
     for line in lines:
-        # Example regex to match security policy entries
+        # regex to match security policy entries
         match = re.match(r'SECURITY_POLICY\s+(\S+)\s+(\S+)\s+(\S+)\s+(\S+)', line)
         if match:
             policy_name, source, destination, action = match.groups()
