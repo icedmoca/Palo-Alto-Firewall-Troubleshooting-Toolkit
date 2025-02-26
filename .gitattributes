@@ -1,2 +1,75 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Python files
+*.py text diff=python
+*.pyi text diff=python
+*.pyw text diff=python
+requirements*.txt text
+Pipfile text
+Pipfile.lock text
+
+# Documentation
+*.md text diff=markdown
+*.rst text
+*.txt text
+*.yaml text
+*.yml text
+docs/* text
+
+# Scripts
+*.sh text eol=lf
+*.bash text eol=lf
+scripts/**/*.sh text eol=lf
+
+# Data files
+*.json text
+*.csv text
+*.log text
+*.xml text
+
+# Configuration files
+*.cfg text
+*.conf text
+*.config text
+*.ini text
+
+# Machine Learning models
+*.h5 binary
+*.pkl binary
+*.joblib binary
+*.onnx binary
+*.pt binary
+*.pth binary
+
+# Jupyter Notebooks
+*.ipynb text
+
+# Graphics
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.svg text
+
+# Git files
+.gitattributes text
+.gitignore text
+.gitconfig text
+
+# Docker
+Dockerfile text
+docker-compose.yml text
+.dockerignore text
+
+# Exclude files from exporting
+.gitattributes export-ignore
+.gitignore export-ignore
+.gitkeep export-ignore
+.editorconfig export-ignore
+.pre-commit-config.yaml export-ignore
+
+# Linguist overrides
+docs/* linguist-documentation
+examples/* linguist-documentation
+*.ipynb linguist-documentation
