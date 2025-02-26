@@ -116,7 +116,3 @@ Contributions are welcome, particularly in the following areas:
 - Novel graph theory applications
 - Optimization algorithms
 - Security analysis techniques
-
-### License
-
-MIT License - See LICENSE file for details
